@@ -1,6 +1,7 @@
 package org.example.springbootweb1;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
@@ -21,4 +22,16 @@ public class HomeController {
         mv.setViewName("result");
         return mv;
     }
+
+    @RequestMapping("/addAlien")
+    public String addAlien(@ModelAttribute("alien1") Alien alien){ //transfer between controller and the jsp - model
+
+//        Alien alien = new Alien();
+//        alien.setAid(aid);
+//        alien.setAname(aname);
+//
+        return "result";
+    }
 }
+
+
