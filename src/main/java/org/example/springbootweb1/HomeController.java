@@ -13,7 +13,7 @@ public class HomeController {
     @RequestMapping("/") //this is the request
     public String home(){  //call this method
         System.out.println("home");
-        return "index.jsp";
+        return "index";
     }
 
     @RequestMapping("/add")
@@ -21,6 +21,6 @@ public class HomeController {
         int result = num1 + num2;
         model.addAttribute("result", result);
         System.out.println("result: " + result);
-        return "result.jsp";
+        return "result";
     }
 }
