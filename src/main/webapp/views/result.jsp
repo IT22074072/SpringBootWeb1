@@ -6,7 +6,8 @@
 </head>
 <body>
 <h2> Welcome to Dinithi</h2>
-<p> ${alien1}</p>
+<p> ${alien}</p>
+<p>Welcome to the ${course}</p>
 </body>
 </html>
    

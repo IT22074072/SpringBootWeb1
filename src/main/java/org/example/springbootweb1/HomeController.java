@@ -9,6 +9,11 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class HomeController {
 
+    @ModelAttribute("course")
+    public String courseName(){
+        return "java";
+    }
+
     @RequestMapping("/") //this is the request
     public String home(){  //call this method
         System.out.println("home");
@@ -24,7 +29,7 @@ public class HomeController {
     }
 
     @RequestMapping("/addAlien")
-    public String addAlien(@ModelAttribute("alien1") Alien alien){ //transfer between controller and the jsp - model
+    public String addAlien(Alien alien){ //transfer between controller and the jsp - model
 
 //        Alien alien = new Alien();
 //        alien.setAid(aid);
